@@ -1,12 +1,22 @@
-
+import React from "react";
+import { Button, DropDown, Header } from "../components/main";
 
 function App() {
-
   return (
-    <div className="text-4xl text-blue-500">
-      Tailwind Css is working !!!
-    </div>
-  )
+    <>
+      <Header variant="light" BrandName="Percept UI" />
+      <Header variant="primary" BrandName="Percept UI" />
+      <Header variant="dark" BrandName="Percept UI" />
+      <div className="flex gap-5">
+        <DropDown variant="dark" />
+        <DropDown variant="primary" />
+        <DropDown variant="light" />
+        <DropDown variant="dark" />
+        <DropDown variant="primary" />
+        <DropDown variant="light" />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
