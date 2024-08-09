@@ -3,11 +3,12 @@ import type { ReactNode } from "react";
 interface HeaderProps {
   BrandName: ReactNode;
   variant: ReactNode;
+  NavLinks: ReactNode;
 }
 import { Button } from "../Button/Button";
 import { DropDown } from "percept-ui";
 
-export const Header = ({ BrandName, variant }: HeaderProps): ReactNode => {
+export const Header = ({ BrandName, variant, NavLinks }: HeaderProps): ReactNode => {
   let variantStyles = "";
   switch (variant) {
     case "primary":
