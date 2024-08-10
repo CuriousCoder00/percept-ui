@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   build: {
     lib: {
-      entry: resolve("./components/main.ts"), 
+      entry: resolve("./src/main.ts"), 
       name: "percept-ui",
       fileName: "percept-ui",
     },
