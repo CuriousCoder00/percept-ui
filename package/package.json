@@ -24,6 +24,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^8.2.8",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
