@@ -1,6 +1,9 @@
 import { cva } from "class-variance-authority";
 
 const colors = {
+  black: "black",
+  dark: "slate",
+  light:"white",
   blue: "blue",
   red: "red",
   green: "green",
@@ -56,13 +59,13 @@ const colorClasses = {
   },
   emerald: {
     solid: "bg-emerald-600 hover:bg-emerald-500",
-    outline: "text-emerald-600 border-emerald-500 bg-transparent hover:bg-emerald-100",
+    outline:
+      "text-emerald-600 border-emerald-500 bg-transparent hover:bg-emerald-100",
     ghost: "text-emerald-600 bg-transparent hover:bg-emerald-100",
   },
   rose: {
     solid: "bg-rose-600 hover:bg-rose-500",
-    outline:
-      "text-rose-600 border-rose-500 bg-transparent hover:bg-rose-100",
+    outline: "text-rose-600 border-rose-500 bg-transparent hover:bg-rose-100",
     ghost: "text-rose-600 bg-transparent hover:bg-rose-100",
   },
   amber: {
@@ -109,6 +112,22 @@ const colorClasses = {
     outline: "text-sky-600 border-sky-500 bg-transparent hover:bg-sky-100",
     ghost: "text-sky-600 bg-transparent hover:bg-sky-100",
   },
+  black:{
+    solid: "bg-black hover:bg-gray-900",
+    outline: "text-black border-black bg-transparent hover:bg-gray-100",
+    ghost: "text-black bg-transparent hover:bg-gray-100",
+  },
+  dark:{
+    solid: "bg-slate-800 hover:bg-gray-700",
+    outline: "text-slate-800 border-slate-800 bg-transparent hover:bg-slate-700",
+    ghost: "text-slate-800 bg-transparent hover:bg-slate-100",
+  },
+  light:{
+    solid: "bg-white hover:bg-slate-100 text-slate-700",
+    outline: "text-white border-white bg-transparent hover:bg-slate-100 hover:text-slate-700",
+    ghost: "text-white bg-transparent hover:bg-slate-100 hover:text-slate-700",
+  },
+  
 };
 
 const buttonStyles = cva(
