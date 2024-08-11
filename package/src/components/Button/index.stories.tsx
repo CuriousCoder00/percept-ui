@@ -3,7 +3,27 @@ import { Button } from ".";
 
 const Variants = ["solid", "outline", "ghost"];
 const Sizes = ["xs", "sm", "md", "lg", "xl"];
-const Colors = ['blue', 'red', 'green', 'yellow', 'cyan', 'gray', 'emerald', 'rose', 'amber', 'orange', 'pink', 'purple', 'indigo', 'teal', 'lime', 'sky'];
+const Colors = [
+  "dark",
+  "blue",
+  "red",
+  "green",
+  "yellow",
+  "cyan",
+  "gray",
+  "emerald",
+  "rose",
+  "amber",
+  "orange",
+  "pink",
+  "purple",
+  "indigo",
+  "teal",
+  "lime",
+  "sky",
+  "black",
+  "light"
+];
 const Radiuses = ["none", "sm", "md", "lg", "xl", "full"];
 
 const meta: Meta<typeof Button> = {
