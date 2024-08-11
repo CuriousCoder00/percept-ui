@@ -3,27 +3,22 @@ import { Button } from ".";
 
 const Variants = ["solid", "outline", "ghost"];
 const Sizes = ["xs", "sm", "md", "lg", "xl"];
-const ColorSchemes = [
-  "primary",
-  "danger",
-  "dark",
-  "success",
-  "warning",
-  "info",
-  "gray",
-];
+const Colors = ['blue', 'red', 'green', 'yellow', 'cyan', 'gray', 'emerald', 'rose', 'amber', 'orange', 'pink', 'purple', 'indigo', 'teal', 'lime', 'sky'];
 const Radiuses = ["none", "sm", "md", "lg", "xl", "full"];
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     variant: {
       options: Variants,
       control: { type: "select" },
     },
-    colorscheme: {
-      options: ColorSchemes,
+    color: {
+      options: Colors,
       control: { type: "select" },
     },
     size: {
@@ -35,10 +30,6 @@ const meta: Meta<typeof Button> = {
       control: { type: "select" },
     },
   },
-  parameters: {
-    layout: "centered",
-  },
-  tags: ["autodocs"],
 };
 
 export default meta;
@@ -49,7 +40,7 @@ export const Solid: Story = {
   args: {
     variant: "solid",
     children: "Button",
-    colorscheme: "primary",
+    color: "blue",
     size: "sm",
     radius: "sm",
   },
@@ -59,7 +50,7 @@ export const Outline: Story = {
   args: {
     variant: "outline",
     children: "Button",
-    colorscheme: "primary",
+    color: "blue",
     size: "sm",
     radius: "sm",
   },
@@ -69,7 +60,7 @@ export const Ghost: Story = {
   args: {
     variant: "ghost",
     children: "Button",
-    colorscheme: "primary",
+    color: "blue",
     size: "sm",
     radius: "sm",
   },
