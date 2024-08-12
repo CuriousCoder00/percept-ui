@@ -14,51 +14,55 @@ const colorSchemes = {
 type ColorScheme = keyof typeof colorSchemes;
 
 const inputStyles = cva(
-  ["w-full", "rounded-md", "font-semibold", "focus:outline-none"],
+  [
+    "w-full",
+    "font-semibold",
+    "focus:outline-none",
+    "px-2 py-1",
+    "text-slate-700 focus:border-blue-500 ",
+    "bg-transparent"
+  ],
   {
     variants: {
       variant: {
-        solid: "transition-colors duration-300 border-2",
-        ghost: "transition-colors duration-300",
+        classic: "transition-colors duration-300 border rounded-md",
+        standard: "transition-colors duration-300 border-b",
+        ghost:"border-0 transition-colors duration-300"
       },
       radius: {
         none: "rounded-none",
         sm: "rounded-sm",
         md: "rounded-md",
+        lg: "rounded-lg",
+        xl: "rounded-xl",
+        full: "rounded-full"
       },
-      colorscheme: Object.keys(colorSchemes).reduce(
-        (acc, key) => ({
-          ...acc,
-          [key]: `text-${colorSchemes[key as ColorScheme]}`,
-        }),
-        {} as Record<ColorScheme, string>
-      ),
     },
-    compoundVariants: (Object.keys(colorSchemes) as ColorScheme[]).flatMap(
-      (scheme) => [
-        {
-          variant: "solid",
-          colorscheme: scheme,
-          className: `border-2 border-${scheme}-500 hover:bg-${scheme}-600`,
-        },
-        {
-          variant: "ghost",
-          colorscheme: scheme,
-          className: `text-${colorSchemes[scheme]}-600 bg-transparent hover:bg-${colorSchemes[scheme]}-100`,
-        },
-      ]
-    ),
+    compoundVariants: [
+      {
+        variant: "classic",
+        className: `focus:shadow-sm focus:shadow-blue-400`,
+      },
+      {
+        variant: "standard",
+        className: ``,
+      },
+      {
+        variant: "ghost",
+        className: ``,
+      }
+    ],
   }
 );
 
 type InputProps = ComponentProps<"input"> & VariantProps<typeof inputStyles>;
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, ...props }, forwardedRef) => (
+  ({ variant, className, radius, ...props }, forwardedRef) => (
     <input
       {...props}
       ref={forwardedRef}
-      className={cn('border-2',inputStyles({ className }))}
+      className={cn(inputStyles({ variant, className, radius, ...props }))}
     />
   )
 );
