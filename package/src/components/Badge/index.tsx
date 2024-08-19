@@ -49,12 +49,14 @@ const badgeStyles = cva(
 
 type badgeProps = ComponentProps<"div"> & VariantProps<typeof badgeStyles>;
 
-export const badge = forwardRef<HTMLDivElement, badgeProps>(
-  ({ variant, className, radius, ...props }, forwardedRef) => (
+export const Badge = forwardRef<HTMLDivElement, badgeProps>(
+  ({ variant, className, radius, children, ...props }, forwardedRef) => (
     <div
       {...props}
       ref={forwardedRef}
       className={cn(badgeStyles({ variant, className, radius, ...props }))}
-    />
+    >
+      {children}
+    </div>
   )
 );
