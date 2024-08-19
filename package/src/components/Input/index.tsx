@@ -2,17 +2,6 @@ import { cn } from "../../utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 
-const colorSchemes = {
-  blue: "blue",
-  red: "red",
-  green: "green",
-  yellow: "yellow",
-  cyan: "cyan",
-  gray: "gray",
-};
-
-type ColorScheme = keyof typeof colorSchemes;
-
 const inputStyles = cva(
   [
     "w-full",
