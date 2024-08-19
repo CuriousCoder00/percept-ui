@@ -1,5 +1,6 @@
 {
   "name": "percept-ui",
+  "description": "Percept-UI, a comprehensive React component library designed to enhance your web applications with high-quality, accessible, and customizable UI components. Whether you're building a simple website or a complex web application, Percept-UI offers a variety of components to meet your needs.",
   "private": true,
   "version": "1.0.0",
   "type": "module",
