@@ -6,6 +6,6 @@ addons.setConfig({
     base: "light",
     brandTitle: "Percept UI",
     brandUrl: "https://percept-ui.vercel.app",
-    brandImage: "../public/logo.png",
+    brandImage: "logo.png",
   }),
 });
