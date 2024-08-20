@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+
 import "percept-ui/percept-ui.css";
 import "../src/globals.css";
 
