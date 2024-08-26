@@ -1,11 +1,11 @@
-```
-name: New Component request
-about: Suggest a new component idea for improving Percept UI
-labels: 'component request, needs triage'
+---
+name: 🚀 New Component request
+about: Suggest a component idea for improving Percept UI
+labels: 'feature request, needs triage'
 
-```
+---
 
-### Is you proposal related to a problem ?
+### Is your proposal related to a problem?
 
 <!--
   Provide a clear and concise description of what the problem is.
