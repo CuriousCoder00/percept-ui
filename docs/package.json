@@ -1,14 +1,14 @@
 {
   "name": "docs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "storybook": "storybook dev -p 6006 public",
     "build-storybook": "storybook build public"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "percept-ui": "^1.0.2",
+    "next": "14.2.6",
+    "percept-ui": "^1.0.4",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -22,15 +22,15 @@
     "@storybook/nextjs": "^8.2.9",
     "@storybook/react": "^8.2.9",
     "@storybook/test": "^8.2.9",
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
+    "eslint": "^9",
+    "eslint-config-next": "14.2.6",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8",
     "storybook": "^8.2.9",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5"
   }
 }
