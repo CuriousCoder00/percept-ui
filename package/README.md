@@ -34,7 +34,7 @@ yarn add percept-ui
 You need to import `style.css` file in order to use applied css styles in components or you can use `TaiilwindCSS`
 
 ```bash
-import '@percept-ui/style.css'
+import 'percept-ui/style.css'
 ```
 
 ### 3. Import and Use Components
@@ -42,19 +42,9 @@ import '@percept-ui/style.css'
 Once installed, you can start importing and using Percept-UI components in your project:
 
 ```code
-import { Button } from 'percept-ui';
 
-function App() {
-  return (
-    <div>
-      <Button variant="solid" color="blue">
-        Click Me
-      </Button>
-    </div>
-  );
-}
+    <Button variant="solid" color="blue">
+      Click Me
+    </Button>
 
-export default App;
 ```
-
-Now you're all set to start building with Percept-UI!
