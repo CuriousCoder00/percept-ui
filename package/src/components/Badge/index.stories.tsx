@@ -1,11 +1,54 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Badge } from ".";
 
+const Variants = ["solid", "outline", "ghost"];
+const Sizes = ["xs", "sm", "md", "lg", "xl"];
+const Colors = [
+  "dark",
+  "blue",
+  "red",
+  "green",
+  "yellow",
+  "cyan",
+  "gray",
+  "emerald",
+  "rose",
+  "amber",
+  "orange",
+  "pink",
+  "purple",
+  "indigo",
+  "teal",
+  "lime",
+  "sky",
+  "black",
+  "light"
+];
+const Radiuses = ["none", "sm", "md", "lg", "xl", "full"];
+
 const meta: Meta<typeof Badge> = {
   title: "Components/Badge",
   component: Badge,
   parameters: {
     layout: "centered",
+  },
+  argTypes: {
+    variant: {
+      options: Variants,
+      control: { type: "select" },
+    },
+    color: {
+      options: Colors,
+      control: { type: "select" },
+    },
+    size: {
+      options: Sizes,
+      control: { type: "select" },
+    },
+    radius: {
+      options: Radiuses,
+      control: { type: "select" },
+    },
   },
 };
 
