@@ -63,6 +63,7 @@ export const Solid: Story = {
     color: "blue",
     size: "sm",
     radius: "sm",
+    
   },
 };
 
