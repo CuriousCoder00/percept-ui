@@ -15,10 +15,6 @@ const meta: Meta<typeof Input> = {
       options: Variants,
       control: { type: "select" },
     },
-    // size: {
-    //   options: Sizes,
-    //   control: { type: "select" },
-    // },
     radius: {
       options: Radiuses,
       control: { type: "select" },
