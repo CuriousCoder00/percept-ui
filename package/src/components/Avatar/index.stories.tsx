@@ -62,6 +62,8 @@ export const Solid: Story = {
     size: 3,
     color: "blue",
     radius: "full",
+    fallback: "A",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNZxgO3RRjNRzwjBJWqI-i9GGQmxCeO0Gy4CYhNN62cUK1FZLvz3X_txIxtCgmBw6mqK4&usqp=CAU",
   },
 };
 export const Soft: Story = {
