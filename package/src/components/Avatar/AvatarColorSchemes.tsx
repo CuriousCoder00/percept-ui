@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 const colors = {
   black: "black",
   dark: "slate",
-  light:"white",
+  light: "white",
   blue: "blue",
   red: "red",
   green: "green",
@@ -37,14 +37,12 @@ const colorClasses = {
   },
   green: {
     solid: "bg-green-600 hover:bg-green-500",
-    outline:
-      "text-green-600 border-green-500",
+    outline: "text-green-600 border-green-500",
     soft: "text-green-600 bg-green-600",
   },
   yellow: {
     solid: "bg-yellow-600 hover:bg-yellow-500",
-    outline:
-      "text-yellow-600 border-yellow-500",
+    outline: "text-yellow-600 border-yellow-500",
     soft: "text-yellow-600 bg-yellow-600",
   },
   cyan: {
@@ -59,8 +57,7 @@ const colorClasses = {
   },
   emerald: {
     solid: "bg-emerald-600 hover:bg-emerald-500",
-    outline:
-      "text-emerald-600 border-emerald-500",
+    outline: "text-emerald-600 border-emerald-500",
     soft: "text-emerald-600 bg-emerald-600",
   },
   rose: {
@@ -70,14 +67,12 @@ const colorClasses = {
   },
   amber: {
     solid: "bg-amber-600 hover:bg-amber-500",
-    outline:
-      "text-amber-600 border-amber-500",
+    outline: "text-amber-600 border-amber-500",
     soft: "text-amber-600 bg-amber-600",
   },
   orange: {
     solid: "bg-orange-600 hover:bg-orange-500",
-    outline:
-      "text-orange-600 border-orange-500",
+    outline: "text-orange-600 border-orange-500",
     soft: "text-orange-600 bg-orange-600",
   },
   pink: {
@@ -87,14 +82,12 @@ const colorClasses = {
   },
   purple: {
     solid: "bg-purple-600 hover:bg-purple-500",
-    outline:
-      "text-purple-600 border-purple-500",
+    outline: "text-purple-600 border-purple-500",
     soft: "text-purple-600 bg-purple-600",
   },
   indigo: {
     solid: "bg-indigo-600 hover:bg-indigo-500",
-    outline:
-      "text-indigo-600 border-indigo-500",
+    outline: "text-indigo-600 border-indigo-500",
     soft: "text-indigo-600 bg-indigo-600",
   },
   teal: {
@@ -112,28 +105,27 @@ const colorClasses = {
     outline: "text-sky-600 border-sky-500",
     soft: "text-sky-600 bg-sky-600",
   },
-  black:{
+  black: {
     solid: "bg-black",
     outline: "text-black border-black",
     soft: "text-black bg-black",
   },
-  dark:{
+  dark: {
     solid: "bg-slate-800",
     outline: "text-slate-800 border-slate-800",
     soft: "text-slate-800 bg-slate-700",
   },
-  light:{
+  light: {
     solid: "bg-white text-slate-700",
     outline: "text-white border-white",
     soft: "text-white bg-white",
   },
-  
 };
 
 const avatarStyles = cva(
   [
     "w-5 h-5 flex justify-center items-center",
-    "rounded-md",
+    "rounded-md overflow-hidden",
     "font-semibold",
     "focus:outline-none",
     "disabled:cursor-not-allowed",
