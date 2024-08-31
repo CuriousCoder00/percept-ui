@@ -1,18 +1,19 @@
 import { cn } from "../../utils";
 import { VariantProps } from "class-variance-authority";
-import { ComponentProps, forwardRef } from "react";
 import { badgeStyles } from "./BadgeColorSchemes";
 
-type badgeProps = ComponentProps<"div"> & VariantProps<typeof badgeStyles>;
+type badgeProps = VariantProps<typeof badgeStyles> & {
+  children: React.ReactNode;
+};
 
-export const Badge = forwardRef<HTMLDivElement, badgeProps>(
-  ({ variant, color, size, className, radius, children, ...props }, forwardedRef) => (
-    <div
-      {...props}
-      ref={forwardedRef}
-      className={cn(badgeStyles({ variant, size, color, className, radius, ...props }))}
-    >
-      {children}
-    </div>
-  )
+export const Badge: React.FC<badgeProps> = ({
+  variant,
+  color,
+  size,
+  radius,
+  children,
+}) => (
+  <div className={cn(badgeStyles({ variant, size, color, radius }))}>
+    {children}
+  </div>
 );
