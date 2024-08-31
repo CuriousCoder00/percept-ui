@@ -25,7 +25,7 @@ const Colors = [
 ];
 
 const meta: Meta<typeof PulseLoader> = {
-  title: "Components/Loaders/PulseLoader",
+  title: "Loaders/PulseLoader",
   component: PulseLoader,
   parameters: {
     layout: "centered",

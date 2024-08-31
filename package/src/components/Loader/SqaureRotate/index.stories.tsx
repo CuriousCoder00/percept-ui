@@ -25,7 +25,7 @@ const Colors = [
 ];
 
 const meta: Meta<typeof SquareRotate> = {
-  title: "Components/Loaders/SquareRotate",
+  title: "Loaders/SquareRotate",
   component: SquareRotate,
   parameters: {
     layout: "centered",

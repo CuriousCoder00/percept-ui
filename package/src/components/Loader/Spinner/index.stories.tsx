@@ -26,7 +26,7 @@ const Colors = [
 const Variant = ["solid", "dashed"];
 
 const meta: Meta<typeof Spinner> = {
-  title: "Components/Loaders/Spinner",
+  title: "Loaders/Spinner",
   component: Spinner,
   parameters: {
     layout: "centered",
