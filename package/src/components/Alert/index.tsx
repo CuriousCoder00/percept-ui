@@ -17,10 +17,10 @@ export const Alert: React.FC<alertprops>=({
     icon,
 }) => (
    <div className={cn(alertStyles({variant,color,withIcon: !!icon}))} >
-      {icon && <div className="absolute left-4">{icon}</div>}
+      {icon && <span className="">{icon}</span>}
     <div>
       {title && <div className="font-semibold mb-2">{title}</div>}
-      <div>{message}</div>
+      <p>{message}</p>
    </div>  
    </div>
 );
