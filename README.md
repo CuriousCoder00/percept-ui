@@ -35,7 +35,7 @@ Join our community to get help, share your knowledge, and stay updated on the la
 
 There are many was to contribute to the project. Code is just one possible means of contribution.
 - **Feedback.** : Tell us what we're doing well or where we can improve.
-- **Report.** : Create issues with bug reports so we can make Radix Themes even better.
+- **Report.** : Create issues with bug reports so we can make Percept UI even better.
 
 ## Working on your first Pull Request?
 
