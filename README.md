@@ -25,7 +25,7 @@ npm install percept-ui
 
 ## Documentation
 
-For full documentation, visit [radix-ui.com/themes/docs](https://percept-ui.vercel.app/).
+For full documentation, visit [percept-ui.vercel.app/](https://percept-ui.vercel.app/).
 
 ## Community
 
