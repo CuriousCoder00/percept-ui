@@ -12,15 +12,17 @@ type alertprops = VariantProps<typeof alertStyles> & {
 export const Alert: React.FC<alertprops> = ({
   variant,
   color,
-  title,
+  title, 
+  position,
   message,
   icon,
 }) => (
-  <div className={cn(alertStyles({ variant, color, withIcon: !!icon }))}>
-    {icon && <span className="">{icon}</span>}
-    <div>
-      {title && <div className="font-semibold mb-2">{title}</div>}
-      <p>{message}</p>
-    </div>
+  <div className={cn(alertStyles({ variant, color,position, withIcon: !!icon }))}>
+    <>
+      {title && <div className="font-semibold mb-2">{title}</div>} 
+      <div className="flex gap-2px"> 
+      {icon && <span className="pr-2">{icon}</span>}<p>{message}</p>
+        </div>    
+    </>
   </div>
 );

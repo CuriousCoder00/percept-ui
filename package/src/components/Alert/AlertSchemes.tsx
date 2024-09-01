@@ -11,25 +11,36 @@ type Colors = keyof typeof colors;
 
 const colorClasses = {
   success: {
-    solid: "bg-green-100 text-green-700 border-green-400",
+    solid: "bg-green-200 text-green-700 border-green-400",
     outline: "text-green-700 border-green-400",
   },
   error: {
-    solid: "bg-red-100 text-red-700 border-red-400",
+    solid: "bg-red-200 text-red-700 border-red-400",
     outline: "text-red-700 border-red-400",
   },
   warning: {
-    solid: "bg-yellow-100 text-yellow-700 border-yellow-400",
+    solid: "bg-yellow-200 text-yellow-700 border-yellow-400",
     outline: "text-yellow-700 border-yellow-400",
   },
   info: {
-    solid: "bg-blue-100 text-blue-700 border-blue-400",
+    solid: "bg-blue-200 text-blue-700 border-blue-400",
     outline: "text-blue-700 border-blue-400",
   },
 };
+const position = {
+  topLeft: "top-2 left-2",
+  topCenter: "top-2 left-1/2 transform -translate-x-1/2",
+  topRight: "top-2 right-2",
+  centerLeft: "top-1/2 left-2 transform -translate-y-1/2",
+  center: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+  centerRight: "top-1/2 right-2 transform -translate-y-1/2",
+  bottomLeft: "bottom-2 left-2",
+  bottomCenter: "bottom-2 left-1/2 transform -translate-x-1/2",
+  bottomRight: "bottom-2 right-2",
+};
 
 const alertStyles = cva(
-  ["p-4", "rounded-md", "border", "flex", "items-start"],
+  ["p-2", "rounded-md", "border", "flex","flex-col", "items-start"],
   {
     variants: {
       variant: {
@@ -37,15 +48,27 @@ const alertStyles = cva(
         outline: "bg-transparent",
       },
       withIcon: {
-        true: "pl-12", // Extra padding when icon is present
-        false: "pl-4",
+        true:"", 
+        false:""
       },
       color: {
         success: "text-green-700",
         error: "text-red-700",
         warning: "text-yellow-700",
         info: "text-blue-700",
-      },
+      },  
+      position:{
+        topLeft: position.topLeft,
+        topCenter: position.topCenter,
+        topRight: position.topRight,
+        centerLeft: position.centerLeft,
+        center: position.center,
+        centerRight: position.centerRight,
+        bottomLeft: position.bottomLeft,
+        bottomCenter: position.bottomCenter,
+        bottomRight: position.bottomRight,
+      }
+
     },
     compoundVariants: (Object.keys(colors) as Colors[]).flatMap((color) => [
       {
@@ -61,7 +84,8 @@ const alertStyles = cva(
     ]),
     defaultVariants: {
       variant: "solid",
-      color: "info",
+      color: "success", 
+      position:"bottomCenter",
       withIcon: false,
     },
   }
