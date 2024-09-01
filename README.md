@@ -33,7 +33,7 @@ Join our community to get help, share your knowledge, and stay updated on the la
 
 ## How to contribute
 
-There are many was to contribute to the project. Code is just one possible means of contribution.
+There are many ways to contribute to the project. Code is just one possible means of contribution.
 - **Feedback.** : Tell us what we're doing well or where we can improve.
 - **Report.** : Create issues with bug reports so we can make Percept UI even better.
 
@@ -55,7 +55,7 @@ A good PR is small, focuses on a single feature or improvement, and clearly comm
 
 ```sh
 git clone https://github.com/<your username>/percept-ui.git
-cd package
+cd percept-ui/package
 git remote add upstream https://github.com/CuriousCoder00/percept-ui.git
 ```
 
