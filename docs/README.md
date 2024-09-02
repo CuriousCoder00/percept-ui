@@ -1,18 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started 
+## Getting Started
 
-This repo uses storybook 
-Node version > = 20
+First, run the development server:
 
-1.Fork the repo from main branch only 
-2. git clone 
-3. open folder 
-4. cd package 
-5. npm install 
-6. npm run storybook 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
