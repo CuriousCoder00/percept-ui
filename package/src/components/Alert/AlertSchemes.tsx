@@ -40,7 +40,16 @@ const position = {
 };
 
 const alertStyles = cva(
-  ["p-2", "rounded-md", "border", "flex","flex-col", "items-start"],
+  [
+    "p-2",
+    "rounded-md",
+    "border",
+    "flex",
+    "flex-col",
+    "items-start",
+    "fixed",
+    "z-[9999]",
+  ],
   {
     variants: {
       variant: {
@@ -48,16 +57,16 @@ const alertStyles = cva(
         outline: "bg-transparent",
       },
       withIcon: {
-        true:"", 
-        false:""
+        true: "",
+        false: "",
       },
       color: {
         success: "text-green-700",
         error: "text-red-700",
         warning: "text-yellow-700",
         info: "text-blue-700",
-      },  
-      position:{
+      },
+      position: {
         topLeft: position.topLeft,
         topCenter: position.topCenter,
         topRight: position.topRight,
@@ -67,8 +76,7 @@ const alertStyles = cva(
         bottomLeft: position.bottomLeft,
         bottomCenter: position.bottomCenter,
         bottomRight: position.bottomRight,
-      }
-
+      },
     },
     compoundVariants: (Object.keys(colors) as Colors[]).flatMap((color) => [
       {
@@ -84,8 +92,8 @@ const alertStyles = cva(
     ]),
     defaultVariants: {
       variant: "solid",
-      color: "success", 
-      position:"bottomCenter",
+      color: "success",
+      position: "bottomCenter",
       withIcon: false,
     },
   }
