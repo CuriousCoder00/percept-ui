@@ -16,9 +16,10 @@ const sizeVariants = {
 
 const alertDialogStyles = cva(
   [
-    "relative",
+    "fixed",
     "rounded-lg",
-    "bg-white",
+    "bg-white", 
+    "w-full",
     "font-sans",
     "text-base",
     "font-light",
