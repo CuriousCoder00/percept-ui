@@ -17,16 +17,17 @@ const sizeVariants = {
 const alertDialogStyles = cva(
   [
     "fixed",
-    "rounded-lg",
-    "bg-white", 
+    "bg-white",
     "w-full",
     "font-sans",
     "text-base",
-    "font-light",
-    "leading-relaxed",
-    "text-blue-gray-500",
-    "antialiased",
-    "shadow-2xl",
+    "rounded-md",
+    "border-2",
+    "p-6",
+    "border-box",
+    "shadow-lg",  
+    "shadow-slate-200",
+    "border-white",
     "m-4",
     " z-[9999999]",
   ],
@@ -52,24 +53,24 @@ const alertDialogStyles = cva(
       size: "sm",
     },
   }
-); 
+);
 
-const backdropStyles = cva(
-    [
-      "pointer-events-none",
-      "fixed",
-      "inset-0",
-      "z-[999]",
-      "grid",
-      "h-screen",
-      "w-screen",
-      "place-items-center",
-      "bg-black",
-      "bg-opacity-60",
-      "opacity-0",
-      "backdrop-blur-sm",
-      "transition-opacity",
-      "duration-300",
-    ]
-  );
-export { alertDialogStyles,backdropStyles };
+// const backdropStyles = cva(
+//     [
+//       "pointer-events-none",
+//       "fixed",
+//       "inset-0",
+//       "z-[999]",
+//       "grid",
+//       "h-screen",
+//       "w-screen",
+//       "place-items-center",
+//       "bg-black",
+//       "bg-opacity-60",
+//       "opacity-0",
+//       "backdrop-blur-sm",
+//       "transition-opacity",
+//       "duration-300",
+//     ]
+//   );
+export { alertDialogStyles };
