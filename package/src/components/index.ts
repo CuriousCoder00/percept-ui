@@ -1,5 +1,6 @@
 export { Avatar } from "./Avatar";
-export { Alert } from "./Alert";
+export { Alert } from "./Alert"; 
+export { AlertDialog } from "./Alert Dialog";
 export { Badge } from "./Badge";
 export { Button } from "./Button";
 export { Input } from "./Input";
