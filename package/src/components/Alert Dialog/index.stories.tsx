@@ -1,56 +1,46 @@
-import {Meta,StoryObj} from "@storybook/react"; 
-import { AlertDialog } from "."; 
+import { Meta, StoryObj } from "@storybook/react";
+import { AlertPopover } from ".";
 
+const Position = ["topCenter", "center"];
 
-const size=["xs","sm","md","lg","xl","xxl"]; 
-const Position=[ "topCenter","center","bottomCenter"]; 
-
-
-const meta:Meta<typeof AlertDialog> ={
-    title:"Components/AlertDialog", 
-    component:AlertDialog, 
-    parameters:{
-        layout:"centered",
+const meta: Meta<typeof AlertPopover> = {
+  title: "Components/AlertPopover",
+  component: AlertPopover,
+  parameters: {
+    layout: "centered",
+  },
+  argTypes: {
+    position: {
+      options: Position,
+      control: { type: "select" },
     },
-    argTypes:{
-        size:{
-            options:size, 
-            control:{type:"select"}
-        },position:{
-            options:Position,
-            control:{type:"select"}
-        }
-    }
-}; 
-export default meta;  
+  },
+};
+export default meta;
 
-type Story =StoryObj<typeof meta> 
+type Story = StoryObj<typeof meta>;
 
-export const Dialog :Story={
-    args:{
-        size:"sm", 
-        title:"Closing dialog", 
-        message:"urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", 
-        cancelText:"Cancel", 
-        confirmText:"Ok", 
-        onAction:()=>{
-          console.log("hello i am clicked")
-        }
-    }
-
-}
-export const DialogWithoutClosingTab :Story={
-    args:{
-        size:"sm",
-        message:"This is for testing purpose",  
-        title:"Not Closing dialog",
-        confirmText:"Okie",
-    }
-}
-export const DialogWithoutTitle :Story={
-    args:{
-        size:"sm",
-        message:"I am created Without Title and without closing tab .",  
-        confirmText:"Got it",
-    }
-}
+export const Dialog: Story = {
+  args: {
+    heading: "Closing dialog",
+    children:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,dignissimos soluta! Quaerat dolorum, voluptas maxime mollitia cum est?Cumque quisquam quos neque alias veritatis dolores!",
+    cancelText: "Cancel",
+    confirmText: "Ok",
+  },
+};
+export const DialogWithoutClosingTab: Story = {
+  args: {
+    heading: "Not Closing dialog",
+    children: "This is for testing purpose",
+    confirmText: "Okie",
+  },
+};
+export const DialogWithoutTitle: Story = {
+  args: {
+    heading: "I am created Without Title and without closing tab .",
+    children:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,dignissimos soluta! Quaerat dolorum, voluptas maxime mollitia cum est?Cumque quisquam quos neque alias veritatis dolores!",
+    confirmText: "Got it",
+  },
+};
