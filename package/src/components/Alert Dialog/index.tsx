@@ -9,7 +9,6 @@ type dialogprops = VariantProps<typeof alertDialogStyles> & {
   message: String;
   confirmText?: string;
   cancelText?: string;
-  onClose?: () => void;
   onAction?: () => void;
 };
 
@@ -20,13 +19,21 @@ export const AlertDialog: React.FC<dialogprops> = ({
   size,
   cancelText = "Cancel",
   confirmText = "Confirm",
-  //   onClose,
-  //   onAction,
+  onAction,
 }) => {
+  const handleClose = () => {
+    let modal = document.getElementById("modal-bg");
+    if (confirmText) {
+      if (modal) {
+        modal.style.display = "none";
+      }
+    }
+  };
   return (
     <div
       id="modal-bg"
-      className="fixed inset-0  items-center justify-center bg-black bg-opacity-50 z-[9999999999]"
+      className="fixed inset-0   items-center justify-center bg-black bg-opacity-50 z-[9999999999] "
+      style={{ display: "flex" }}
     >
       <div
         //   ref={dialogRef}
@@ -37,12 +44,24 @@ export const AlertDialog: React.FC<dialogprops> = ({
 
         <div className="flex gap-3 w-[100%]  justify-end">
           {cancelText && (
-            <Button variant={"outline"} color={"black"} size={"sm"}>
+            <Button
+              variant={"outline"}
+              color={"black"}
+              size={"sm"}
+              onClick={handleClose}
+              style={{ width: "auto" }}
+            >
               {cancelText}
             </Button>
           )}
           {confirmText && (
-            <Button variant={"solid"} color={"blue"} size={"sm"}>
+            <Button
+              variant={"solid"}
+              color={"blue"}
+              size={"sm"}
+              onClick={onAction}
+              style={{ width: "auto" }}
+            >
               {confirmText}
             </Button>
           )}
