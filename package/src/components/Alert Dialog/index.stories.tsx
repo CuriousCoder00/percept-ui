@@ -33,7 +33,6 @@ export const Dialog :Story={
         message:"urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", 
         cancelText:"Cancel", 
         confirmText:"Ok", 
-        // onClose:onClose() 
         onAction:()=>{
           console.log("hello i am clicked")
         }
@@ -45,14 +44,13 @@ export const DialogWithoutClosingTab :Story={
         size:"sm",
         message:"This is for testing purpose",  
         title:"Not Closing dialog",
-        confirmText:"Ok",
+        confirmText:"Okie",
     }
 }
 export const DialogWithoutTitle :Story={
     args:{
         size:"sm",
-        message:"This is for testing purpose",  
-        title:"Not Closing dialog",
-        confirmText:"Ok",
+        message:"I am created Without Title and without closing tab .",  
+        confirmText:"Got it",
     }
 }

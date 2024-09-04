@@ -17,11 +17,12 @@ export const AlertDialog: React.FC<dialogprops> = ({
   message,
   position,
   size,
-  cancelText = "Cancel",
-  confirmText = "Confirm",
+  cancelText, 
+  confirmText,
   onAction,
 }) => {
-  const handleClose = () => {
+  const handleClose = () => { 
+    if(!cancelText) return;
     let modal = document.getElementById("modal-bg");
     if (confirmText) {
       if (modal) {
