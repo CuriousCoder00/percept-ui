@@ -1,11 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { GridBackground } from ".";
+import { Background } from ".";
 
-const meta: Meta<typeof GridBackground> = {
+const Variants = ["grid", "dot"];
+
+const meta: Meta<typeof Background> = {
   title: "Backgrounds/Background",
-  component: GridBackground,
+  component: Background,
   parameters: {
     layout: "centered",
+  },
+  argTypes: {
+    variant: { control: "select", options: Variants },
   },
 };
 
@@ -15,11 +20,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Grid_Background: Story = {
   args: {
-    grid: true,
+    variant: "grid",
   },
 };
 export const Dot_Background: Story = {
   args: {
-    grid: false,
+    variant: "dot",
   },
 };
