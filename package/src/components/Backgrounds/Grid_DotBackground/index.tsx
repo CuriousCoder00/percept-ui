@@ -1,15 +1,16 @@
-export const GridBackground = ({ grid }: { grid?: boolean }) => {
+export const Background = ({ variant }: { variant?: string }) => {
   return (
     <>
-      {grid ? (
+      {variant === "grid" && (
         <div
-          className={`absolute inset-0 h-full w-full dark:bg-neutral-900 bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:30px_30px]`}
+          className={`absolute inset-0 h-full w-full dark:bg-neutral-900 bg-white bg-[linear-gradient(to_right,#acacac12_1px,transparent_1px),linear-gradient(to_bottom,#acacac12_1px,transparent_1px)] bg-[size:30px_30px]`}
         ></div>
-      ) : (
-        <div className="absolute inset-0 h-full w-full dark:bg-neutral-900 bg-white bg-[radial-gradient(#515152_1px,transparent_1px)] [background-size:30px_30px]"></div>
+      )}
+      {variant === "dot" && (
+        <div className="absolute inset-0 h-full w-full dark:bg-neutral-900 bg-white bg-[radial-gradient(#3d3d3e_1px,transparent_1px)] [background-size:30px_30px]"></div>
       )}
     </>
   );
 };
 
-export default GridBackground;
+export default Background;
