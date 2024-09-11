@@ -3,13 +3,7 @@
     width: 100%;
   }
   
-  .input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-  }
+
   
   .suggestionsList {
     position: absolute;
@@ -36,7 +30,7 @@
   
   .suggestionItem.active {
     background-color: #007bff;
-    color: white;
+    color: white; 
   }
   
   .suggestionItem:hover {

@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 type AutoCompleteProps = {
   suggestions: string[];
   onSelection: (value: string) => void;
+
 };
 
 export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
@@ -74,14 +75,14 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
         placeholder="Type to search"
       />
         {isSuggestionVisible && (
-        <div className={`'suggestionsList' ${isSuggestionVisible && "visible"}`} ref={suggestionsRef}>
+        <div className={`suggestionsList ${isSuggestionVisible && "visible"}`} ref={suggestionsRef}>
           {filteredSuggestions.map((suggestion, index) => (
             <div
               key={index}
-              className={`'suggestionItem' ${index === activeIndex && "active"}`}
+              className={`suggestionItem ${index === activeIndex && "active"}`}
               onMouseDown={() => handleSuggestionClick(suggestion)}
             >
-              {suggestion}
+           {suggestion}
             </div>
           ))}
         </div>

@@ -5,7 +5,7 @@ const Variants = ["classic", "standard", "ghost"];
 const Radiuses = ["none", "sm", "md", "lg", "xl", "full"];
 
 const meta: Meta<typeof Input> = {
-  title: "Components/Input",
+  title: "Input/Input",
   component: Input,
   parameters: {
     layout: "centered",
