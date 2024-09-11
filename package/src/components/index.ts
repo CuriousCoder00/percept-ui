@@ -1,6 +1,5 @@
 export { Avatar } from "./Avatar";
 export { Alert } from "./Alert"; 
-export { AlertDialog } from "./Alert Dialog";
 export {AutoCompleteSearch} from "./AutoComplete-Input"
 export { AlertDialog, AlertDialogBody, AlertDialogTrigger  } from "./Alert Dialog";
 export { Accordion } from "./Accordion"
