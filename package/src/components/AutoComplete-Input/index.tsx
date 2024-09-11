@@ -4,13 +4,17 @@ import React, { useState, useEffect, useRef } from "react";
 
 type AutoCompleteProps = {
   suggestions: string[];
-  onSelection: (value: string) => void;
+  onSelection: (value: string) => void; 
+  variant?:"classic" | "standard" | "ghost";  
+  radius?:"none" | "sm" | "md" | "lg" | "xl" | "full" ;
 
 };
 
 export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
   suggestions,
-  onSelection,
+  onSelection, 
+  variant, 
+  radius
 }) => {
   const [inputValue, setInputValue] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
@@ -71,7 +75,8 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
         onFocus={handleFocus}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
-        variant="classic"
+        variant={variant} 
+        radius={radius}
         placeholder="Type to search"
       />
         {isSuggestionVisible && (
