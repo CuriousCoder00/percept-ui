@@ -1,4 +1,4 @@
-import { Input } from "@/Input";
+import { Input } from "@/Input-search/Input";
 import "./AutoCompleteModule.css";
 import React, { useState, useEffect, useRef } from "react";
 
