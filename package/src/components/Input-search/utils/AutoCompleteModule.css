@@ -1,4 +1,4 @@
-.autoCompleteContainer {
+.container {
     position: relative;
     width: 100%;
   }
@@ -37,3 +37,31 @@
     background-color: #f0f0f0;
   }
   
+
+  /* multi search containe */ 
+  .tagsInputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .tag {
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .removeTagButton {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
