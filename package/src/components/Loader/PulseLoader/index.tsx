@@ -7,3 +7,6 @@ type pulseLoaderProps = VariantProps<typeof pulseLoaderStyles>;
 export const PulseLoader: React.FC<pulseLoaderProps> = ({ color, size }) => (
   <div className={cn(pulseLoaderStyles({ size, color }))} />
 );
+
+
+PulseLoader.displayName = "PulseLoader";

@@ -4,17 +4,16 @@ import React, { useState, useEffect, useRef } from "react";
 
 type AutoCompleteProps = {
   suggestions: string[];
-  onSelection: (value: string) => void; 
-  variant?:"classic" | "standard" | "ghost";  
-  radius?:"none" | "sm" | "md" | "lg" | "xl" | "full" ;
-
+  onSelection: (value: string) => void;
+  variant?: "classic" | "standard" | "ghost";
+  radius?: "none" | "sm" | "md" | "lg" | "xl" | "full";
 };
 
 export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
   suggestions,
-  onSelection, 
-  variant, 
-  radius
+  onSelection,
+  variant,
+  radius,
 }) => {
   const [inputValue, setInputValue] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
@@ -34,7 +33,7 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
     } else {
       setFilteredSuggestions(suggestions);
     }
-  }, [inputValue,suggestions]); 
+  }, [inputValue, suggestions]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -49,23 +48,22 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
     setTimeout(() => {
       setIsSuggestionVisible(false);
     }, 100);
-  };  
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "ArrowDown" && activeIndex < filteredSuggestions.length - 1) {
-      setActiveIndex(activeIndex + 1); 
+      setActiveIndex(activeIndex + 1);
     } else if (e.key === "ArrowUp" && activeIndex > 0) {
-      setActiveIndex(activeIndex - 1); 
+      setActiveIndex(activeIndex - 1);
     } else if (e.key === "Enter" && activeIndex >= 0) {
       handleSuggestionClick(filteredSuggestions[activeIndex]);
     }
   };
-  const handleSuggestionClick=(suggestions:string)=>{
-    setInputValue(suggestions);  
-    setIsSuggestionVisible(false)
-    onSelection(suggestions)
-
-  }
+  const handleSuggestionClick = (suggestions: string) => {
+    setInputValue(suggestions);
+    setIsSuggestionVisible(false);
+    onSelection(suggestions);
+  };
 
   return (
     <div className="autoCompleteContainer">
@@ -75,19 +73,22 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
         onFocus={handleFocus}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
-        variant={variant} 
+        variant={variant}
         radius={radius}
         placeholder="Type to search"
       />
-        {isSuggestionVisible && (
-        <div className={`suggestionsList ${isSuggestionVisible && "visible"}`} ref={suggestionsRef}>
+      {isSuggestionVisible && (
+        <div
+          className={`suggestionsList ${isSuggestionVisible && "visible"}`}
+          ref={suggestionsRef}
+        >
           {filteredSuggestions.map((suggestion, index) => (
             <div
               key={index}
               className={`suggestionItem ${index === activeIndex && "active"}`}
               onMouseDown={() => handleSuggestionClick(suggestion)}
             >
-           {suggestion}
+              {suggestion}
             </div>
           ))}
         </div>
@@ -95,3 +96,5 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
     </div>
   );
 };
+
+AutoCompleteSearch.displayName = "AutoCompleteSearch";

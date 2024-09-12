@@ -7,3 +7,6 @@ type spinnerProps = VariantProps<typeof squareRotateLoaderStyles>;
 export const SquareRotate: React.FC<spinnerProps> = ({ color, size }) => (
   <div className={cn(squareRotateLoaderStyles({ color, size }))} />
 );
+
+
+SquareRotate.displayName = "SquareRotate";

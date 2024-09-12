@@ -50,3 +50,6 @@ export const Accordion: React.FC<accordionProps> = ({
     </div>
   );
 };
+
+
+Accordion.displayName = "Accordion";

@@ -13,4 +13,5 @@ export const Background = ({ variant }: { variant?: string }) => {
   );
 };
 
-export default Background;
+
+Background.displayName = "Background";

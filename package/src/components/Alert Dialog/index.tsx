@@ -119,3 +119,5 @@ export const AlertPopover: React.FC<DialogProps> = ({
     </div>
   );
 };
+
+AlertDialog.displayName = "AlertDialog";

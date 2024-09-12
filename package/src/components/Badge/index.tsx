@@ -17,3 +17,6 @@ export const Badge: React.FC<badgeProps> = ({
     {children}
   </div>
 );
+
+
+Badge.displayName = "Badge";

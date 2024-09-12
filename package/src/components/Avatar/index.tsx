@@ -27,3 +27,6 @@ export const Avatar: React.FC<avatarProps> = ({
     )}
   </div>
 );
+
+
+Avatar.displayName = "Avatar";

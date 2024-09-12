@@ -53,3 +53,5 @@ export const Alert: React.FC<alertprops> = ({
     </div>
   );
 };
+
+Alert.displayName = "Alert";
