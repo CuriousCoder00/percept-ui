@@ -1,5 +1,5 @@
-import { Input } from "@/Input";
-import "./AutoCompleteModule.css";
+import { Input } from "@/Input-search/Input";
+import "../utils/AutoCompleteModule.css";
 import React, { useState, useEffect, useRef } from "react";
 
 type AutoCompleteProps = {
@@ -66,7 +66,7 @@ export const AutoCompleteSearch: React.FC<AutoCompleteProps> = ({
   };
 
   return (
-    <div className="autoCompleteContainer">
+    <div className="container">
       <Input
         value={inputValue}
         onChange={handleInputChange}
