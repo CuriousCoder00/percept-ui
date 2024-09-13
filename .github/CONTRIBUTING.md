@@ -85,7 +85,29 @@ cd package
 npm install
 ```
 
-After staring the development server, navigate to `http://localhost:6006/` to view the storybook.
+To run the project locally
+```bash
+# To run docs - uses nextra + next.js
+npm run docs
+
+# To run package - uses storybook + react
+npm run package
+```
+
+Run manually with usual/normal commands
+```bash
+# To run docs - uses nextra + next.js
+cd docs
+npm run dev
+
+# To run package - uses storybook + react
+cd package
+npm run dev
+```
+
+> After staring the development server:
+- To view the docs navigate to `http://localhost:3000/` and it if doesn't work navigate to `http://localhost:3000/docs/getting-started`.
+- To view the storybook playground to play with components navigate to `http://localhost:6006/`.
 
 Make your changes and check that they resolve the problem.
 
