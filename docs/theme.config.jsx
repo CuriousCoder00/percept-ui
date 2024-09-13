@@ -1,5 +1,5 @@
 import Footer from "./components/Footer";
-import "./app/globals.css"
+
 export default {
     logo: <span>Percept UI</span>,
     docsRepositoryBase: 'https://github.com/CuriousCoder00/percept-ui/tree/main/docs',
