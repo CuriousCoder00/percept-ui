@@ -2,7 +2,10 @@
   "scripts": {
     "docs": "cd docs && npm run dev",
     "docs:install": "cd docs && npm install",
-    "package":"cd package && npm run dev",
-    "package:install":"cd package && npm install"
+    "package": "cd package && npm run dev",
+    "package:install": "cd package && npm install",
+    "install": "cd docs && npm install && cd ../package && npm install",
+    "docs:build": "cd docs && npm run build",
+    "package:build": "cd package && npm run build"
   }
 }

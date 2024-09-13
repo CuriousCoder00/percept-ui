@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "docs": "file:",
     "next": "14.2.10",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",

@@ -18,7 +18,6 @@
   "scripts": {
     "prebuild": "rimraf dist || rm -rf dist",
     "build": "tsc -b && vite build",
-    "prepublish": "npm run build",
     "lint": "eslint .--ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "dev": "storybook dev -p 6006"
   },
