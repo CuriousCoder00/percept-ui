@@ -111,4 +111,25 @@ npm run dev
 
 Make your changes and check that they resolve the problem.
 
-Lastly, run `npm run build` to ensure that the build runs successfully before submitting the pull request.
+
+```bash
+# Lastly, run
+
+npm run docs:build
+# to build `docs` directory and run 
+
+npm run package:build
+#to build `package` directory.
+```
+
+Or, you can use traditional method-
+```bash
+# To build docs - uses nextra + next.js
+cd docs
+npm run build
+# To build package - uses storybook + react
+cd package
+npm run build
+```
+
+Kindly ensure that the build runs successfully before submitting the pull request.
