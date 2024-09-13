@@ -33,7 +33,7 @@ export const Alert: React.FC<alertprops> = ({
 
       return () => clearTimeout(timer);
     }
-  }, [duration, onclose]);
+  }, [duration, onClose]);
 
   if (!visible) return null;
 

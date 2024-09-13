@@ -14,7 +14,8 @@ export default function AlertDialogComponent() {
                     cancelText={"No"}
                     handleClose={handleClose}
                     onAction={handleClose}>
-                    Are you sure you want to delete this item?
+                    <p>Are you sure you want to delete this item?</p>
+                    {/* Are you sure you want to delete this item? */}
                 </AlertDialogBody>
             </AlertDialog>
         </div>
