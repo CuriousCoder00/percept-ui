@@ -12,6 +12,7 @@
     "clsx": "^2.1.1",
     "docs": "file:",
     "next": "14.2.10",
+    "next-themes": "^0.3.0",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
     "percept-ui": "^1.0.8",
