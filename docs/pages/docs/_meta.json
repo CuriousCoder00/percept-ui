@@ -1,7 +1,4 @@
 {
   "getting-started": "Getting Started",
-
-  "components": {
-    "title": "Components"
-  }
+  "components":"Components"
 }

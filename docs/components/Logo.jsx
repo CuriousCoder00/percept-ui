@@ -10,8 +10,8 @@ const Logo = () => {
             <circle cx="44" cy="48" r="13" fill="#050D10" />
             <circle cx="44" cy="48" r="13" fill="#050D10" />
             <circle cx="44" cy="48" r="13" fill="#050D10" />
-            <ellipse cx="55.5" cy="47.5" rx="5.5" ry="6.5" fill="white" fill-opacity="0.38" />
-            <ellipse cx="56.5" cy="52.5" rx="3.5" ry="4.5" fill="white" fill-opacity="0.79" />
+            <ellipse cx="55.5" cy="47.5" rx="5.5" ry="6.5" fill="white" fillOpacity="0.38" />
+            <ellipse cx="56.5" cy="52.5" rx="3.5" ry="4.5" fill="white" fillOpacity="0.79" />
         </svg>
     )
 }

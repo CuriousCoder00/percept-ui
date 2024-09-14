@@ -48,8 +48,5 @@ export default {
     },
     toc: {
         backToTop: true
-    },
-    themeConfig: {
-        initialColorMode: 'light',
     }
 }
