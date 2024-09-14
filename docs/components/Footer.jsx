@@ -11,12 +11,7 @@ const Footer = () => {
                 </Link>
             </div>
             <div className='flex gap-1'>
-                Made by - <Link href={'https://github.com/CuriousCoder00'}>
-                    Kapil
-                </Link> &
-                <Link href={'https://github.com/rishang14'}>
-                    Rishang
-                </Link>
+                
             </div>
         </div>
     )
