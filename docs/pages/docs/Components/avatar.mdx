@@ -2,29 +2,29 @@ import { Avatar } from "percept-ui";
 import "percept-ui/percept-ui.css";
 import { MdArrowOutward } from "react-icons/md";
 
-<h1 class="text-4xl font-bold mt-5">Avatar</h1>
-<p class="text-xl">Profile picture, user initials and fallback icon.</p>
-<div class="flex justify-start items-center gap-7 my-3 p-2">
+<h1 className="text-4xl font-bold mt-5">Avatar</h1>
+<p className="text-xl">Profile picture, user initials and fallback icon.</p>
+<div className="flex justify-start items-center gap-7 my-3 p-2">
   <a
-    class="group text-sky-600 transition duration-300"
+    className="group text-sky-600 transition duration-300"
     href="https://github.com/CuriousCoder00/percept-ui/blob/main/package/src/components/Avatar/index.tsx"
     target="_blank"
   >
-    View source <MdArrowOutward class="inline" />
-    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+    View source <MdArrowOutward className="inline" />
+    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
   </a>
   <a
-    class="group text-sky-600 transition duration-300"
+    className="group text-sky-600 transition duration-300"
     href="https://github.com/CuriousCoder00/percept-ui/issues/new?title=[Avatar]%20Issue"
     target="_blank"
   >
-    Report an issue <MdArrowOutward class="inline" />
-    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+    Report an issue <MdArrowOutward className="inline" />
+    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
   </a>
 </div>
 
-<div class="flex flex-col my-6">
-  <div class="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
+<div className="flex flex-col my-6">
+  <div className="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
     <Avatar
       fallback="A"
       size={3}
@@ -32,9 +32,9 @@ import { MdArrowOutward } from "react-icons/md";
     />
     <Avatar size={3} fallback="X" />
   </div>
-  <div class="block text-wrap w-full py-0">
+  <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <div class="flex gap-2 p-2">
+    <div className="flex gap-2 p-2">
       <Avatar
         fallback="A"
         size={3}
@@ -63,8 +63,8 @@ import { MdArrowOutward } from "react-icons/md";
 
 Use the size prop to control the `size` of the avatar.
 
-<div class="flex flex-col my-6 px-2">
-  <div class="flex items-center gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
+<div className="flex flex-col my-6 px-2">
+  <div className="flex items-center gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
     <Avatar
       size={1}
       fallback="A"
@@ -91,9 +91,9 @@ Use the size prop to control the `size` of the avatar.
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNZxgO3RRjNRzwjBJWqI-i9GGQmxCeO0Gy4CYhNN62cUK1FZLvz3X_txIxtCgmBw6mqK4&usqp=CAU"
     />
   </div>
-  <div class="block text-wrap w-full py-0">
+  <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <div class="flex gap-2 p-2">
+    <div className="flex gap-2 p-2">
       <Avatar
         size={1}
         fallback="A"
@@ -128,15 +128,15 @@ Use the size prop to control the `size` of the avatar.
 
 Use the `variant` prop to control the visual style of the avatar.
 
-<div class="flex flex-col my-6 px-2">
-  <div class="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
+<div className="flex flex-col my-6 px-2">
+  <div className="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
     <Avatar size={3} variant="solid" fallback="A" />
     <Avatar size={3} variant="outline" fallback="A" />
     <Avatar size={3} variant="soft" fallback="A" />
   </div>
-  <div class="block text-wrap w-full py-0">
+  <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <div class="flex gap-2 p-2">
+    <div className="flex gap-2 p-2">
       <Avatar size={3} variant="solid" fallback="A" />
       <Avatar size={3} variant="outline" fallback="A" />
       <Avatar size={3} variant="soft" fallback="A" />
@@ -149,8 +149,8 @@ Use the `variant` prop to control the visual style of the avatar.
 
 Use the `color` prop to control the color of the avatar.
 
-<div class="flex flex-col my-6 px-2">
-  <div class="flex flex-wrap gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
+<div className="flex flex-col my-6 px-2">
+  <div className="flex flex-wrap gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
     <Avatar color="blue" size={3} fallback="A" />
     <Avatar color="red" size={3} fallback="A" />
     <Avatar color="green" size={3} fallback="A" />
@@ -171,9 +171,9 @@ Use the `color` prop to control the color of the avatar.
     <Avatar color="black" size={3} fallback="A" />
     <Avatar color="light" size={3} fallback="A" />
   </div>
-  <div class="block text-wrap w-full py-0">
+  <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <div class="flex gap-2 p-2">
+    <div className="flex gap-2 p-2">
       <Avatar color="blue" size={3} fallback="A" />
       <Avatar color="red" size={3} fallback="A" />
       <Avatar color="green" size={3} fallback="A" />
@@ -202,8 +202,8 @@ Use the `color` prop to control the color of the avatar.
 
 Use the `radius` prop to assign a specific radius value.
 
-<div class="flex flex-col my-6 px-2">
-  <div class="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
+<div className="flex flex-col my-6 px-2">
+  <div className="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
     <Avatar size={3} radius="none" fallback="A" />
     <Avatar size={3} radius="sm" fallback="A" />
     <Avatar size={3} radius="md" fallback="A" />
@@ -211,9 +211,9 @@ Use the `radius` prop to assign a specific radius value.
     <Avatar size={3} radius="xl" fallback="A" />
     <Avatar size={3} radius="full" fallback="A" />
   </div>
-  <div class="block text-wrap w-full py-0">
+  <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <div class="flex gap-2 p-2">
+    <div className="flex gap-2 p-2">
       <Avatar size={3} radius="none" fallback="A" />
       <Avatar size={3} radius="sm" fallback="A" />
       <Avatar size={3} radius="md" fallback="A" />
@@ -229,14 +229,14 @@ Use the `radius` prop to assign a specific radius value.
 
 Use the `fallback` prop to modify the rendered fallback element.
 
-<div class="flex flex-col my-6 px-2">
-  <div class="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
+<div className="flex flex-col my-6 px-2">
+  <div className="flex gap-2 p-4 bg-blue-500/15 mb-2 rounded-lg">
     <Avatar size={3} fallback="A" />
     <Avatar size={3} fallback="AB" />
     <Avatar
       size={3}
       fallback={
-        <div class="w-8 h-8">
+        <div className="w-8 h-8">
           <svg viewBox="0 0 64 64" fill="currentColor">
             <path d="M41.5 14c4.687 0 8.5 4.038 8.5 9s-3.813 9-8.5 9S33 27.962 33 23 36.813 14 41.5 14zM56.289 43.609C57.254 46.21 55.3 49 52.506 49c-2.759 0-11.035 0-11.035 0 .689-5.371-4.525-10.747-8.541-13.03 2.388-1.171 5.149-1.834 8.07-1.834C48.044 34.136 54.187 37.944 56.289 43.609zM37.289 46.609C38.254 49.21 36.3 52 33.506 52c-5.753 0-17.259 0-23.012 0-2.782 0-4.753-2.779-3.783-5.392 2.102-5.665 8.245-9.472 15.289-9.472S35.187 40.944 37.289 46.609zM21.5 17c4.687 0 8.5 4.038 8.5 9s-3.813 9-8.5 9S13 30.962 13 26 16.813 17 21.5 17z" />
           </svg>
@@ -244,15 +244,15 @@ Use the `fallback` prop to modify the rendered fallback element.
       }
     />
   </div>
-  <div class="block text-wrap w-full py-0">
+  <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <div class="flex gap-2 p-2">
+    <div className="flex gap-2 p-2">
       <Avatar size={3} fallback="A" />
       <Avatar size={3} fallback="AB" />
       <Avatar
         size={3}
         fallback={
-          <div class="w-8 h-8">
+          <div className="w-8 h-8">
             <svg viewBox="0 0 64 64" fill="currentColor">
               <path d="M41.5 14c4.687 0 8.5 4.038 8.5 9s-3.813 9-8.5 9S33 27.962 33 23 36.813 14 41.5 14zM56.289 43.609C57.254 46.21 55.3 49 52.506 49c-2.759 0-11.035 0-11.035 0 .689-5.371-4.525-10.747-8.541-13.03 2.388-1.171 5.149-1.834 8.07-1.834C48.044 34.136 54.187 37.944 56.289 43.609zM37.289 46.609C38.254 49.21 36.3 52 33.506 52c-5.753 0-17.259 0-23.012 0-2.782 0-4.753-2.779-3.783-5.392 2.102-5.665 8.245-9.472 15.289-9.472S35.187 40.944 37.289 46.609zM21.5 17c4.687 0 8.5 4.038 8.5 9s-3.813 9-8.5 9S13 30.962 13 26 16.813 17 21.5 17z" />
             </svg>
