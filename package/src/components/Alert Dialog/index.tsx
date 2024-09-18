@@ -30,13 +30,13 @@ export const AlertDialog: React.FC<DialogProps> = ({
   modalToggle,
 }) => {
   return (
-    <div className={`${!modalToggle && "hidden"}`} id="modal-bg">
+    <div className={`${!modalToggle && "hidden"} dark:bg-gray-800 `} id="modal-bg">
       <div className={cn(alertDialogStyles({ position }))}>
-        {heading && <h2 className="font-bold mb-2 p-1 w-full">{heading}</h2>}
+        {heading && <h2 className="font-bold mb-2 p-1 w-full dark:text-white">{heading}</h2>}
         <div>{children}</div>
       </div>
       <button
-        className="absolute inset-0 bg-black bg-opacity-50 z-40"
+        className="absolute inset-0 bg-black bg-opacity-50 z-40 dark:bg-gray-900 dark:bg-opacity-75"
         onClick={handleClose}
       ></button>
     </div>
@@ -51,7 +51,7 @@ export const AlertDialogBody: React.FC<AlertBodyProps> = ({
   onAction
 }) => {
   return (
-    <div className="w-full p-2 mb-[5px]">
+    <div className="w-full p-2 mb-[10px]  dark:text-white ">
       {children}
       <div className="flex gap-3 w-full justify-end">
         {cancelText && (
