@@ -1,7 +1,7 @@
 {
-  "alert-dialog": "Alert Dialog",
   "avatar": "Avatar",
+   "alert": "Alert",
+  "alert-dialog": "Alert Dialog",
   "badge": "Badge",
-  "button": "Button",
-  "alert": "Alert"
+  "button": "Button"
 }
