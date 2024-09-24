@@ -1,5 +1,7 @@
 import { Alert } from "percept-ui";
 import "percept-ui/percept-ui.css";
+import { IoMdDoneAll } from "react-icons/io";
+import { MdError, MdInfo, MdWarning } from "react-icons/md";
 
 <h1 className="text-4xl mt-5 font-bold">Alert</h1>
 <p className="text-xl">
@@ -19,8 +21,8 @@ import "percept-ui/percept-ui.css";
  variant="solid"
  color="success"
  position="center" 
- message="This is success message"
- title="Success" 
+ message="Here is a gentle confirmation that your action was successful." 
+ icon={<IoMdDoneAll/>} 
  />
 </div>
 </div>  
@@ -30,10 +32,90 @@ import "percept-ui/percept-ui.css";
  variant="solid"
  color="success"
  position="center" 
- message="This is success message"
- title="Success" 
+ message="Here is a gentle confirmation that your action was successful."
+ icon={<IoMdDoneAll/>}
  />
     ```
   </div>
 
 </div>
+
+<h3 className="text-xl mb-3"> Different variety  via colors </h3> 
+<div className="flex  flex-col my-6"> 
+<div className="flex gap-2  w-full p-4 bg-blue-500/15 mb-2 rounded-lg" style={{height:"150px"}}> 
+ <Alert 
+ variant="solid"
+ color="error"
+ position="topCenter" 
+ message="This is an solid error Alert." 
+ icon={<MdError/>} 
+  />
+ <Alert 
+ variant="solid"
+ color="info"
+ position="bottomCenter" 
+ message="This is an solid info Alert." 
+ icon={<MdInfo/>} 
+ />
+ <Alert 
+ variant="solid"
+ color="warning"
+ position="bottomRight" 
+ message="This is an solid warning Alert." 
+ icon={<MdWarning/>} 
+ />
+</div>  
+  <div className="block text-wrap w-full py-0">
+    ```jsx code copy 
+     <Alert 
+ variant="solid"
+ color="error"
+ position="bottomCenter" 
+ message="This is an solid error Alert." 
+ icon={<MdError/>} 
+   /> 
+    <Alert 
+ variant="solid"
+ color="error"
+ position="topCenter" 
+ message="This is an solid error Alert."
+ icon={<MdError/>}
+  /> 
+ <Alert 
+ variant="solid"
+ color="info"
+ position="bottomRight" 
+ message="This is an solid info Alert." 
+ icon={<MdInfo/>}   
+  />
+  <Alert 
+ variant="solid"
+ color="warning"
+ position="center" 
+ message="This is an solid warning Alert." 
+ icon={<MdWarning/>} 
+ />
+
+    ```
+  </div>
+
+</div> 
+
+
+## API References
+
+| Prop     | Type                                     | Description                            | Default |
+| :------- | :--------------------------------------- | :------------------------------------- | :------ |
+| variant  | `"solid" \| "outline" \|                 | Border and Background of Alert         | solid   |
+| color    | `"success\|"error"\|"warning"\|"error"`  | Color of Background                    | success |
+| title    | `String Optional`                        | Title of the Avatar                    |  ""     |
+| message  | `String`                                 | Message for your Alert                 | success |
+| duration | `Number Optional`                        | Automatically Hide after given time    |  ""     |
+| onClose  | `Function Optional`                      | Operation you can perform              |console.log|
+| icon     | `react icons Optional`                   | Icons in success,error Alert           |React icons|
+| position | `  "topLeft", "topCenter","topRight",   |Positon for ur screenn                   | center  |
+|           |  "topRight",  "centerLeft",  "centerLeft",|
+|           |"centerRight","bottomCenter","bottomLeft",|
+|           |"bottomCenter",  "bottomRight",`          |
+                                                           
+
