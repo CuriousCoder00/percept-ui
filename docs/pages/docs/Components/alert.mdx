@@ -1,4 +1,39 @@
 import { Alert } from "percept-ui";
 import "percept-ui/percept-ui.css";
 
+<h1 className="text-4xl mt-5 font-bold">Alert</h1>
+<p className="text-xl">
+  Alerts display brief messages for the user without interrupting their use of
+  the app
+</p>
 
+<div className="flex flex-col my-6"> 
+<h2 className="text-xl font-bold ">Introduction</h2>
+<p className="text-l mt-2">Alerts give users brief and potentially time-sensitive information in an unobtrusive manner.</p> 
+<h3 className="mt-2">Default Alert</h3>
+</div> 
+<div className="flex  flex-col my-6"> 
+<div className="flex  w-full p-4 bg-blue-500/15 mb-2 rounded-lg" style={{height:"150px"}}> 
+<div className="relative h-[100px]">
+ <Alert 
+ variant="solid"
+ color="success"
+ position="center" 
+ message="This is success message"
+ title="Success" 
+ />
+</div>
+</div>  
+  <div className="block text-wrap w-full py-0">
+    ```jsx code copy
+    <Alert 
+ variant="solid"
+ color="success"
+ position="center" 
+ message="This is success message"
+ title="Success" 
+ />
+    ```
+  </div>
+
+</div>
