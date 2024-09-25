@@ -3,5 +3,6 @@
    "alert": "Alert",
   "alert-dialog": "Alert Dialog",
   "badge": "Badge",
-  "button": "Button"
+  "button": "Button", 
+  "loader":"Loader"
 }
