@@ -7,5 +7,6 @@
     "install": "cd docs && npm install && cd ../package && npm install",
     "docs:build": "cd docs && npm run build",
     "package:build": "cd package && npm run build"
-  }
+  },
+  "version": "0.0.1"
 }
