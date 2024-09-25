@@ -4,5 +4,6 @@
   "alert-dialog": "Alert Dialog",
   "badge": "Badge",
   "button": "Button", 
+  "input-box":"Input Box",
   "loader":"Loader"
 }
