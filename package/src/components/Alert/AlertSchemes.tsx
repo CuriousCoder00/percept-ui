@@ -29,7 +29,7 @@ const typeClasses = {
 };
 
 const alertStyles = cva(
-  ["p-2 rounded border flex justify-start gap-2 items-center w-64"],
+  ["p-2 rounded border flex justify-start gap-2 items-center"],
   {
     variants: {
       variant: {
@@ -62,7 +62,6 @@ const alertStyles = cva(
     defaultVariants: {
       variant: "solid",
       type: "success",
-      withIcon: false,
     },
   }
 );

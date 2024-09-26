@@ -2,7 +2,7 @@ import { cn } from "../../utils";
 import { VariantProps } from "class-variance-authority";
 import { alertStyles } from "./AlertSchemes";
 // import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ComponentProps } from "react";
 import {
   IoCheckmarkDoneCircle,
   IoInformationCircleOutline,
@@ -10,21 +10,26 @@ import {
 import { PiSealWarning } from "react-icons/pi";
 import { BiError } from "react-icons/bi";
 
-type alertprops = VariantProps<typeof alertStyles> & {
-  type?: String;
-  message: String;
-  duration?: number;
-  loading?: boolean;
-  icon?: React.ReactNode;
-};
+type alertprops = VariantProps<typeof alertStyles> &
+  ComponentProps<"div"> & {
+    type?: String;
+    message: String;
+    duration?: number;
+    // loading?: boolean;
+    // loading default true
+    loading: boolean;
+    icon?: React.ReactNode;
+    className?: string;
+  };
 
 export const Alert: React.FC<alertprops> = ({
   variant,
   type,
   message,
   duration,
-  loading,
+  loading = true,
   icon,
+  className,
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -40,12 +45,7 @@ export const Alert: React.FC<alertprops> = ({
 
   if (!visible || !loading) return null;
   return (
-    <div
-      className={cn(
-        !loading ? "hidden" : "flex",
-        alertStyles({ variant, type })
-      )}
-    >
+    <div className={cn(className, alertStyles({ variant, type }))}>
       <span className="text-xl font-bold">
         {icon ? (
           icon

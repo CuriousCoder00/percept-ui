@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Alert } from ".";
-import { IoMdDoneAll } from "react-icons/io";
 
 const Variants = ["solid", "outline"];
 const Types = ["success", "error", "warning", "info"];
@@ -43,56 +42,56 @@ export const Solid_Success: Story = {
   args: {
     variant: "solid",
     type: "success",
-    message: "This is Success Message",
+    message: "This is Solid Success Message",
   },
 };
 export const Outline_Success: Story = {
   args: {
     variant: "outline",
     type: "success",
-    message: "This is Success Message",
+    message: "This is Outline Success Message",
   },
 };
 export const Solid_Error: Story = {
   args: {
     variant: "solid",
     type: "error",
-    message: "This is Success Message",
+    message: "This is Solid Error Message",
   },
 };
 export const Outline_Error: Story = {
   args: {
     variant: "outline",
     type: "error",
-    message: "This is Success Message",
+    message: "This is Outline Error Message",
   },
 };
 export const Solid_Warning: Story = {
   args: {
     variant: "solid",
     type: "warning",
-    message: "This is Success Message",
+    message: "This is Solid Warning Message",
   },
 };
 export const Outline_Warning: Story = {
   args: {
     variant: "outline",
     type: "warning",
-    message: "This is Success Message",
+    message: "This is Outline Warning Message",
   },
 };
 export const Solid_Info: Story = {
   args: {
     variant: "solid",
     type: "info",
-    message: "This is Success Message",
+    message: "This is Solid Info Message",
   },
 };
 export const Outline_Info: Story = {
   args: {
     variant: "solid",
     type: "info",
-    message: "This is Success Message without icon",
+    message: "This is Outline Info Message",
   },
 };
 
