@@ -14,7 +14,8 @@ type alertprops = VariantProps<typeof alertStyles> & {
   type?: String;
   message: String;
   duration?: number;
-  loading?:boolean;
+  loading?: boolean;
+  icon?: React.ReactNode;
 };
 
 export const Alert: React.FC<alertprops> = ({
@@ -22,7 +23,8 @@ export const Alert: React.FC<alertprops> = ({
   type,
   message,
   duration,
-  loading
+  loading,
+  icon,
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -36,12 +38,18 @@ export const Alert: React.FC<alertprops> = ({
     }
   }, [duration]);
 
-  if (!visible) return null;
-
+  if (!visible || !loading) return null;
   return (
-    <div className={cn(alertStyles({ variant, type }))}>
+    <div
+      className={cn(
+        !loading ? "hidden" : "flex",
+        alertStyles({ variant, type })
+      )}
+    >
       <span className="text-xl font-bold">
-        {type === "success" ? (
+        {icon ? (
+          icon
+        ) : type === "success" ? (
           <IoCheckmarkDoneCircle />
         ) : type === "warning" ? (
           <PiSealWarning />
