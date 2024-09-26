@@ -1,21 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Alert } from "."; 
+import { Alert } from ".";
 import { IoMdDoneAll } from "react-icons/io"
 
 const Variants = ["solid", "outline"];
-const Colors = ["success", "error", "warning", "info"]; 
+const Types = ["success", "error", "warning", "info"];
 const Timer =[1000,2000,3000,4000,5000]
-const Position = [
-  "topLeft",
-  "topCenter",
-  "topRight",
-  "centerLeft",
-  "center",
-  "centerRight",
-  "bottomLeft",
-  "bottomCenter",
-  "bottomRight",
-];
 
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
@@ -28,19 +17,12 @@ const meta: Meta<typeof Alert> = {
       options: Variants,
       control: { type: "select" },
     },
-    color: {
-      options: Colors,
+    type: {
+      options: Types,
       control: { type: "select" },
     },
-    withIcon: {
-      control: { type: "boolean" },
-    },
-    position: {
-      options: Position,
-      control: { type: "select" },
-    }, 
     duration:{
-      options:Timer, 
+      options:Timer,
       control:{type:"select"}
     }
   },
@@ -50,52 +32,69 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Solid: Story = {
+export const Solid_Success: Story = {
   args: {
     variant: "solid",
-    color: "success",
-    title: "Success",
+    type: "success",
     message: "This is Success Message",
-    icon: <IoMdDoneAll/>,
   },
 };
-export const SolidWithoutIcon: Story = {
+export const Outline_Success: Story = {
+  args: {
+    variant: "outline",
+    type: "success",
+    message: "This is Success Message",
+  },
+};
+export const Solid_Error: Story = {
   args: {
     variant: "solid",
-    color: "info",
-    title: "Info",
-    position: "bottomCenter",
+    type: "error",
+    message: "This is Success Message",
+  },
+};
+export const Outline_Error: Story = {
+  args: {
+    variant: "outline",
+    type: "error",
+    message: "This is Success Message",
+  },
+};
+export const Solid_Warning: Story = {
+  args: {
+    variant: "solid",
+    type: "warning",
+    message: "This is Success Message",
+  },
+};
+export const Outline_Warning: Story = {
+  args: {
+    variant: "outline",
+    type: "warning",
+    message: "This is Success Message",
+  },
+};
+export const Solid_Info: Story = {
+  args: {
+    variant: "solid",
+    type: "info",
+    message: "This is Success Message",
+  },
+};
+export const Outline_Info: Story = {
+  args: {
+    variant: "solid",
+    type: "info",
     message: "This is Success Message without icon",
   },
 };
-export const SolidError: Story = {
-  args: {
-    variant: "solid",
-    color: "error",
-    position: "topCenter",
-    message: "This is Error Message without icon",
-    icon: <span>❌</span>,
-  },
-};   
+
 export const AlertWithDuration: Story = {
   args: {
     variant: "solid",
-    color: "success",
-    title: "Success",
-    message: `This will disappear`,
-    icon: <IoMdDoneAll/>,
-    duration:4000, 
-    onClose: ()=>{
-      console.log("I am closed")
-    }
+    type: "success",
+    message: `This will disappear in 5 secs`,
+    duration:5000,
   },
 };
 
-export const Outline: Story = {
-  args: {
-    variant: "outline",
-    color: "error",
-    withIcon: false,
-    message: "Error message without icon and title",
-  },
-};

@@ -1,55 +1,35 @@
 import { cva } from "class-variance-authority";
 
-const colors = {
+const types = {
   success: "green",
   error: "red",
   warning: "yellow",
   info: "blue",
 };
 
-type Colors = keyof typeof colors;
+type Types = keyof typeof types;
 
-const colorClasses = {
+const typeClasses = {
   success: {
     solid: "bg-green-200 text-green-700 border-green-400",
-    outline: "text-green-700 border-green-400",
+    outline: "bg-green-200 bg-opacity-20 text-green-400 border-green-400",
   },
   error: {
     solid: "bg-red-200 text-red-700 border-red-400",
-    outline: "text-red-700 border-red-400",
+    outline: "bg-red-200 bg-opacity-20 text-red-400 border-red-400",
   },
   warning: {
     solid: "bg-yellow-200 text-yellow-700 border-yellow-400",
-    outline: "text-yellow-700 border-yellow-400",
+    outline: "bg-yellow-200 bg-opacity-20 text-yellow-400 border-yellow-400",
   },
   info: {
     solid: "bg-blue-200 text-blue-700 border-blue-400",
-    outline: "text-blue-700 border-blue-400",
+    outline: "bg-blue-200 bg-opacity-20 text-blue-400 border-blue-400",
   },
-};
-const position = {
-  topLeft: "top-2 left-2",
-  topCenter: "top-2 left-1/2 transform -translate-x-1/2",
-  topRight: "top-2 right-2",
-  centerLeft: "top-1/2 left-2 transform -translate-y-1/2",
-  center: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
-  centerRight: "top-1/2 right-2 transform -translate-y-1/2",
-  bottomLeft: "bottom-2 left-2",
-  bottomCenter: "bottom-2 left-1/2 transform -translate-x-1/2",
-  bottomRight: "bottom-2 right-2",
 };
 
 const alertStyles = cva(
-  [
-    "p-2",
-    "rounded-md",
-    "border",
-    "flex",
-    "flex-col",
-    "items-start",
-    "fixed",
-    "z-[9999]",
-  ],
+  ["p-2 rounded border flex justify-start gap-2 items-center w-64"],
   {
     variants: {
       variant: {
@@ -60,40 +40,28 @@ const alertStyles = cva(
         true: "",
         false: "",
       },
-      color: {
+      type: {
         success: "text-green-700",
         error: "text-red-700",
         warning: "text-yellow-700",
         info: "text-blue-700",
       },
-      position: {
-        topLeft: position.topLeft,
-        topCenter: position.topCenter,
-        topRight: position.topRight,
-        centerLeft: position.centerLeft,
-        center: position.center,
-        centerRight: position.centerRight,
-        bottomLeft: position.bottomLeft,
-        bottomCenter: position.bottomCenter,
-        bottomRight: position.bottomRight,
-      },
     },
-    compoundVariants: (Object.keys(colors) as Colors[]).flatMap((color) => [
+    compoundVariants: (Object.keys(types) as Types[]).flatMap((type) => [
       {
         variant: "solid",
-        color,
-        className: colorClasses[color].solid,
+        type,
+        className: typeClasses[type].solid,
       },
       {
         variant: "outline",
-        color,
-        className: colorClasses[color].outline,
+        type,
+        className: typeClasses[type].outline,
       },
     ]),
     defaultVariants: {
       variant: "solid",
-      color: "success",
-      position: "bottomCenter",
+      type: "success",
       withIcon: false,
     },
   }

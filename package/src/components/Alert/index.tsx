@@ -3,24 +3,26 @@ import { VariantProps } from "class-variance-authority";
 import { alertStyles } from "./AlertSchemes";
 // import React from "react";
 import { useState, useEffect } from "react";
+import {
+  IoCheckmarkDoneCircle,
+  IoInformationCircleOutline,
+} from "react-icons/io5";
+import { PiSealWarning } from "react-icons/pi";
+import { BiError } from "react-icons/bi";
 
 type alertprops = VariantProps<typeof alertStyles> & {
-  title?: String;
+  type?: String;
   message: String;
-  icon?: React.ReactNode;
   duration?: number;
-  onClose?: () => void;
+  loading?:boolean;
 };
 
 export const Alert: React.FC<alertprops> = ({
   variant,
-  color,
-  title,
-  position,
+  type,
   message,
-  icon,
   duration,
-  onClose,
+  loading
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -28,28 +30,28 @@ export const Alert: React.FC<alertprops> = ({
     if (duration) {
       const timer = setTimeout(() => {
         setVisible(!visible);
-        if (onClose) onClose();
       }, duration);
 
       return () => clearTimeout(timer);
     }
-  }, [duration, onClose]);
+  }, [duration]);
 
   if (!visible) return null;
 
   return (
-    <div
-      className={cn(
-        alertStyles({ variant, color, position, withIcon: !!icon })
-      )}
-    >
-      <>
-        {title && <div className="font-semibold mb-2 w-full">{title}</div>}
-        <div className="flex items-center gap-2px w-full">
-          {icon && <span className="pr-2 ">{icon}</span>}
-          <p>{message}</p>
-        </div>
-      </>
+    <div className={cn(alertStyles({ variant, type }))}>
+      <span className="text-xl font-bold">
+        {type === "success" ? (
+          <IoCheckmarkDoneCircle />
+        ) : type === "warning" ? (
+          <PiSealWarning />
+        ) : type === "error" ? (
+          <BiError />
+        ) : (
+          <IoInformationCircleOutline />
+        )}
+      </span>
+      <p>{message}</p>
     </div>
   );
 };
