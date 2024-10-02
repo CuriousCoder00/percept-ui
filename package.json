@@ -8,5 +8,5 @@
     "docs:build": "cd docs && npm run build",
     "package:build": "cd package && npm run build"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
