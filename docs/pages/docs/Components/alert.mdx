@@ -8,39 +8,72 @@ import { MdError, MdInfo, MdWarning } from "react-icons/md";
   Alerts display brief messages for the user without interrupting their use of
   the app
 </p>
-
-<div className="flex flex-col my-6"> 
-<h2 className="text-xl font-bold ">Introduction</h2>
-<p className="text-l mt-2">Alerts give users brief and potentially time-sensitive information in an unobtrusive manner.</p> 
-<h3 className="mt-2">Default Alert</h3>
-</div> 
-<div className="flex  flex-col my-6 "> 
-<div className="p-3 bg-blue-500/15 rounded-lg">
- <Alert 
- variant="solid"
- color="success"
- position="center" 
- message="Here is a gentle confirmation that your action was successful." 
- icon={<IoMdDoneAll/>} 
- />
+<div className="flex justify-start items-center gap-7 my-3 p-2">
+  <a
+    className="group text-sky-600 transition duration-300"
+    href="https://github.com/CuriousCoder00/percept-ui/blob/main/package/src/components/Alert/index.tsx"
+    target="_blank"
+  >
+    View source <MdArrowOutward className="inline" />
+    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+  </a>
+  <a
+    className="group text-sky-600 transition duration-300"
+    href="https://github.com/CuriousCoder00/percept-ui/issues/new?title=[Alert]%20Issue"
+    target="_blank"
+  >
+    Report an issue <MdArrowOutward className="inline" />
+    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+  </a>
 </div>
+
+<div className="flex flex-col my-6 ">
+  <div className="p-3 bg-blue-500/15 rounded-lg">
+    <Alert
+      variant="solid"
+      color="success"
+      position="center"
+      message="Here is a gentle confirmation that your action was successful."
+      icon={<IoMdDoneAll />}
+    />
+  </div>
   <div className="block text-wrap w-full py-0">
     ```jsx code copy
-    <Alert 
- variant="solid"
- color="success"
- position="center" 
- message="Here is a gentle confirmation that your action was successful."
- icon={<IoMdDoneAll/>}
- />
+    <Alert
+      variant="solid"
+      color="success"
+      position="center"
+      message="Here is a gentle confirmation that your action was successful."
+      icon={<IoMdDoneAll />}
+    />
     ```
   </div>
-
 </div>
 
-<h3 className="text-xl mb-3"> Different variety  via colors </h3> 
+## API References
+
+| Prop     | Type                                       | Description                         | Default     |
+| :------- | :----------------------------------------- | :---------------------------------- | :---------- |
+| variant  | `"solid" \| "outline" \|                   | Border and Background of Alert      | solid       |
+| color    | `"success\|"error"\|"warning"\|"error"`    | Color of Background                 | success     |
+| title    | `String Optional`                          | Title of the Avatar                 | ""          |
+| message  | `String`                                   | Message for your Alert              | success     |
+| duration | `Number Optional`                          | Automatically Hide after given time | ""          |
+| onClose  | `Function Optional`                        | Operation you can perform           | console.log |
+| icon     | `react icons Optional`                     | Icons in success,error Alert        | React icons |
+| position | ` "topLeft", "topCenter","topRight",       | Positon for ur screenn              | center      |
+|          | "topRight", "centerLeft", "centerLeft",    |
+|          | "centerRight","bottomCenter","bottomLeft", |
+|          | "bottomCenter", "bottomRight",`            |
+
+## Examples
+
+### Colors
+
+<h3 className="text-xl mb-3"> Different variety via colors </h3> 
 <div className="flex  flex-col my-6"> 
 <div className="flex gap-2  w-full p-4 bg-blue-500/15 mb-2 rounded-lg" style={{height:"150px"}}> 
+<div className="flex flex-col">
  <Alert 
  variant="solid"
  color="error"
@@ -62,6 +95,7 @@ import { MdError, MdInfo, MdWarning } from "react-icons/md";
  message="This is an solid warning Alert." 
  icon={<MdWarning/>} 
  />
+</div>
 </div>  
   <div className="block text-wrap w-full py-0">
     ```jsx code copy 
@@ -95,32 +129,12 @@ import { MdError, MdInfo, MdWarning } from "react-icons/md";
  />
 
     ```
+
   </div>
 
-</div> 
-
-
-## API References
-
-| Prop     | Type                                     | Description                            | Default |
-| :------- | :--------------------------------------- | :------------------------------------- | :------ |
-| variant  | `"solid" \| "outline" \|                 | Border and Background of Alert         | solid   |
-| color    | `"success\|"error"\|"warning"\|"error"`  | Color of Background                    | success |
-| title    | `String Optional`                        | Title of the Avatar                    |  ""     |
-| message  | `String`                                 | Message for your Alert                 | success |
-| duration | `Number Optional`                        | Automatically Hide after given time    |  ""     |
-| onClose  | `Function Optional`                      | Operation you can perform              |console.log|
-| icon     | `react icons Optional`                   | Icons in success,error Alert           |React icons|
-| position | `  "topLeft", "topCenter","topRight",   |Positon for ur screenn                   | center  |
-|           |  "topRight",  "centerLeft",  "centerLeft",|
-|           |"centerRight","bottomCenter","bottomLeft",|
-|           |"bottomCenter",  "bottomRight",`          |
-                                                           
-
-
-<h3 className="text-2xl">Alert with outline and Title </h3> 
-<p className="text-xl mt-5">Outline</p> 
-
+</div>
+<h3 className="text-2xl">Alert with outline and Title </h3>
+<p className="text-xl mt-5">Outline</p>{" "}
 
 <div className="flex  flex-col my-6"> 
 <div className="flex gap-2  w-full p-4 bg-blue-500/15 mb-2 rounded-lg" style={{height:"150px"}}> 
@@ -178,10 +192,10 @@ import { MdError, MdInfo, MdWarning } from "react-icons/md";
  />
 
     ```
+
   </div>
 
-</div>  
-
+</div>
 
 <p className="mt-2 text-xl">Title</p>
 
@@ -240,6 +254,7 @@ import { MdError, MdInfo, MdWarning } from "react-icons/md";
  />
 
     ```
+
   </div>
 
-</div>  
+</div>
